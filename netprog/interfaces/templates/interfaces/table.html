@@ -1,0 +1,22 @@
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    {% if interface_list %}
+    <table class="table table--striped">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th class="text-center">Enabled</th>
+            <th class="text-center">Action</th>
+        </tr>
+        {% for interface in interface_list %}
+        {% if interface.name == "GigabitEthernet1" %}
+        {% include "./management_interface.html" %}
+        {% else %}
+        {% include "./interface.html" %}
+        {% endif %}
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No interfaces are available.</p>
+    {% endif %}
+</form>

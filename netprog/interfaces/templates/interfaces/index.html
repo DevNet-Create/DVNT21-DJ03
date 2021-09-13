@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Device Interfaces</title>
+  <link rel="stylesheet" href="{% static 'css/cui-standard.min.css' %}">
+</head>
+
+<body class="cui">
+  {% include "./header.html" %}
+  <div class="content">
+    <div class="container-fluid">
+      <div class="section">
+        <div class="flex-center-vertical">
+          <h1>Interfaces</h1>
+        </div>
+      </div>
+      <div class="section">
+        <div class="responsive-table">
+          {% if interface_list %}
+            {% include "./table.html" %}
+          {% else %}
+          <p>No interfaces are available.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% include "./footer.html" %}
+  </div>
+</body>
+
+</html>

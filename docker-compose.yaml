@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    user: "1000"
+    image: holprg2002
+    volumes:
+      - ./netprog:/app
+    ports:
+      - "80:8080"

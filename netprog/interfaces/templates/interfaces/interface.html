@@ -1,0 +1,15 @@
+<tr>
+    <td>{{ interface.name }}</td>
+    <td>{{ interface.description }}</td>
+    {% if interface.enabled %}
+    <td class="text-center"><span class="icon-check text-success"></span></td>
+    <td class="text-center">
+        <button class="btn btn--small btn--danger" value="{{ interface.name }}" name="disable">Disable</button>
+    </td>
+    {% else %}
+    <td class="text-center"><span class="icon-close text-danger"></span></td>
+    <td class="text-center">
+        <button class="btn btn--small btn--success" value="{{ interface.name }}" name="enable">Enable</button>
+    </td>
+    {% endif %}
+</tr>
