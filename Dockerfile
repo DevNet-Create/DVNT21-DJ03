@@ -12,9 +12,5 @@ RUN pip install -r requirements.txt --no-cache-dir
 # Copy the contents of our DJANGO project into /app directory inside the container
 COPY ./netprog .
 
-# Add group root to app directory (needed for OpenShift)
-RUN chgrp -R 1000 /app && \
-   chmod -R g+rwX /app
-
 # Upon container start, lets run DJANGO manage.py on port 8080
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]

@@ -26,7 +26,7 @@ SECRET_KEY = "=$sq(wpn^e_*0frso5hx&x#mw5%&1cll)x3k+m3eo*y0y$ru&#"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

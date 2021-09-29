@@ -1,5 +1,8 @@
 import json
 import requests
+import urllib3
+
+urllib3.disable_warnings()
 
 
 def set_interface(
