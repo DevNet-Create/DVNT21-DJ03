@@ -26,7 +26,7 @@ SECRET_KEY = "=$sq(wpn^e_*0frso5hx&x#mw5%&1cll)x3k+m3eo*y0y$ru&#"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -121,3 +121,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+DEVICE_HOST = "198.18.134.11"
+DEVICE_USERNAME = "cisco"
+DEVICE_PASSWORD = "cisco"

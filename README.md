@@ -1,8 +1,8 @@
 # Building custom UIs for RESFTCONF-enabled platforms using Django web framework
 
-This repository contains the required source code for DVNT21-LTXX Cisco DevNet Create 2021 session.
+This repository contains the required source code for DVNT21-DJ03 Cisco DevNet Create 2021 session.
 
-# Documentation
+## Documentation
 
 If you are interested how to follow the steps to create the portal, please to to [here](https://ciscolive2021.github.io/HOLPRG-2002/)
 

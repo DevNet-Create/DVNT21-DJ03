@@ -1,9 +1,17 @@
 import json
 import requests
+import urllib3
+from django.conf import settings
+
+urllib3.disable_warnings()
 
 
 def set_interface(
-    interface, enabled, hostname="198.18.134.11", username="cisco", password="cisco"
+    interface,
+    enabled,
+    hostname=settings.DEVICE_HOST,
+    username=settings.DEVICE_USERNAME,
+    password=settings.DEVICE_PASSWORD,
 ):
     url = f"https://{hostname}/restconf/data/ietf-interfaces:interfaces"
     headers = headers = {
@@ -29,7 +37,11 @@ def set_interface(
         print(f"There was an error setting interface '{interface}': {err}")
 
 
-def get_interfaces(hostname="198.18.134.11", username="cisco", password="cisco"):
+def get_interfaces(
+    hostname=settings.DEVICE_HOST,
+    username=settings.DEVICE_USERNAME,
+    password=settings.DEVICE_PASSWORD,
+):
     interfaces = []
     url = f"https://{hostname}/restconf/data/ietf-interfaces:interfaces/interface"
 
