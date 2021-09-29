@@ -121,3 +121,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+DEVICE_HOST = "198.18.134.11"
+DEVICE_USERNAME = "cisco"
+DEVICE_PASSWORD = "cisco"
